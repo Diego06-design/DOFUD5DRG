@@ -61,8 +61,8 @@ void copiar_cadena(const char cadena_origen[], char cadena_destino[], const int 
 	cadena_destino++;	
 	}
 }
-*/ 
 
+*/
 /** ------------------------------------------------------------
  * @brief Módulo que imprime el vector de la cadena de destino
  * @param char cadena_destino
@@ -72,7 +72,12 @@ void copiar_cadena(const char cadena_origen[], char cadena_destino[], const int 
  * ------------------------------------------------------------*/
 
 void imprimir_cadena(char cadena_destino[], const int DIM_CADENA_DESTINO){
-	
+	int i = 0;
+	while (cadena_destino[i] != '\0'){
+		cout << cadena_destino[i];
+		i++;
+	}
+	cout <<endl;
 }
 
 /** ------------------------------------------------------------
@@ -523,9 +528,9 @@ int main() {
 
 int main(){
 	char cadena[MAX_NOMBRE] = "diego";
-	int longitud = 0;
+	char copiaCadena[MAX_NOMBRE] = "";
 	
-	longitud = longitud_cadena(cadena,MAX_NOMBRE);
-	cout << "longitud mide: " << longitud << endl;
+	//copiar_cadena(cadena, copiaCadena, MAX_NOMBRE, MAX_NOMBRE);
+	imprimir_cadena(cadena, MAX_NOMBRE);
 
 }
