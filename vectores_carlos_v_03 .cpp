@@ -45,24 +45,18 @@ int longitud_cadena(const char cadena[], const int DIM_CADENA) {
  * @pre cadena_destino <= DIM_CADENA_DESTINO
  * @post El contenido de la cadena de destino será sobrescrito con lo que hubiera previamente
  * ------------------------------------------------------------*/
-/*
+
 void copiar_cadena(const char cadena_origen[], char cadena_destino[], const int DIM_CADENA_ORIGEN, const int DIM_CADENA_DESTINO) {
-	const int DIM_CADENA_ORIGEN = 6;
-	char cadena_origen[DIM_CADENA_ORIGEN] = {'D', 'i', 'e', 'g', 'o', '\0'};
-
-	const int DIM_CADENA_DESTINO = 6;
-	char cadena_destino[DIM_CADENA_DESTINO];	
-
-	int i = 0;
-	cadena_destino = 0;	
+	int i = 0;	
 	
-	for (i=0; i < DIM_CADENA_DESTINO; i++){
+	while (cadena_origen[i] != '\0'){
 		cadena_destino[i] = cadena_origen[i];
-	cadena_destino++;	
+		i++;
 	}
+	cadena_destino[i] = '\0';
 }
 
-*/
+
 /** ------------------------------------------------------------
  * @brief Módulo que imprime el vector de la cadena de destino
  * @param char cadena_destino
@@ -530,7 +524,7 @@ int main(){
 	char cadena[MAX_NOMBRE] = "diego";
 	char copiaCadena[MAX_NOMBRE] = "";
 	
-	//copiar_cadena(cadena, copiaCadena, MAX_NOMBRE, MAX_NOMBRE);
-	imprimir_cadena(cadena, MAX_NOMBRE);
+	copiar_cadena(cadena, copiaCadena, MAX_NOMBRE, MAX_NOMBRE);
+	imprimir_cadena(copiaCadena, MAX_NOMBRE);
 
 }
