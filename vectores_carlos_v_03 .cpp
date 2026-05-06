@@ -18,7 +18,6 @@ const int MAX_PUN          = 10;
 // ============================================================
 
 // ---- Gestión de cadenas de caracteres ----
-//nuevo comentario
 
 /** ------------------------------------------------------------
  * @brief Módulo que calcula la longitud de una cadena de caracteres
@@ -30,11 +29,11 @@ const int MAX_PUN          = 10;
 
 int longitud_cadena(const char cadena[], const int DIM_CADENA) {
 	int longitud = 0;
-	int i = 0;
-	while (cadena[i] != '\0') {
-		i++;
+	
+	while (cadena[longitud] != '\0') {
+		longitud++;
 	}
-	cadena [longitud] != '\0';
+	
 	return longitud;
 }
 
@@ -46,7 +45,7 @@ int longitud_cadena(const char cadena[], const int DIM_CADENA) {
  * @pre cadena_destino <= DIM_CADENA_DESTINO
  * @post El contenido de la cadena de destino será sobrescrito con lo que hubiera previamente
  * ------------------------------------------------------------*/
-
+/*
 void copiar_cadena(const char cadena_origen[], char cadena_destino[], const int DIM_CADENA_ORIGEN, const int DIM_CADENA_DESTINO) {
 	const int DIM_CADENA_ORIGEN = 6;
 	char cadena_origen[DIM_CADENA_ORIGEN] = {'D', 'i', 'e', 'g', 'o', '\0'};
@@ -62,6 +61,7 @@ void copiar_cadena(const char cadena_origen[], char cadena_destino[], const int 
 	cadena_destino++;	
 	}
 }
+*/ 
 
 /** ------------------------------------------------------------
  * @brief Módulo que imprime el vector de la cadena de destino
@@ -109,13 +109,14 @@ bool cadena_vacia(const char cadena[]) {
  * @post El contenido del vector de salida va a ser sobrescrito (Se borra la información)
  * @return bool
  * ------------------------------------------------------------*/
-
+/*
 bool agregar_entero_en_vector(int v[], int &v_util, int valor_a_agregar) {
 	for (int i=0; i < util_v; i++){
 		v[i] = valor_a_agregar
 	util_v++;	
 	}
 }
+*/
 
 /** ------------------------------------------------------------
  * @brief Módulo que elimina un número entero de un vector de enteros
@@ -269,11 +270,7 @@ int front_pedir_entero(const char msg[], int mn, int mx) {
  * ------------------------------------------------------------*/
 
 void front_pedir_nombre(char dest[]) {
-    char nombre_concursante
-    cin.ignore();
-    cin.getline(dest, MAX_NOMBRE);
-    cout << "Introduce el nombre del concursante" << endl;
-    cin >> nombre_concursante;
+
 }
 
 /** ------------------------------------------------------------
@@ -368,8 +365,6 @@ void ctrl_agregar_concursante(
 
 	// Llamamos al módulo correspondiente para agregar el elemento al vector
 
-	agregar_entero_en_vector(v, v_util, valor_a_agregar);
-
 
         cout << "[OK] Concursante agregado.\n";
     }
@@ -393,8 +388,6 @@ void ctrl_eliminar_concursante(
         int selec = front_pedir_entero("Numero de concursante a eliminar: ", 1, num_concursantes) - 1;
         
         // LLamamos al módulo correspondiente
-
-	eliminar_entero_en_vector(v, util_v, posicion_a_eliminar);
 
         cout << "[OK] Concursante eliminado.\n";
     }
@@ -422,7 +415,6 @@ void ctrl_mostrar_clasificacion(
         char v5[], char v6[], char v7[], char v8[],
         int v_puntuaciones_entrante[], int v_puntuaciones_primero[], int v_puntuaciones_postre[], int &num_concursantes){
         
-        calcular_media(puntuacion_entrante, puntuacion_primero, puntuacion_postre, num_concursantes);
             
 }
 
@@ -439,7 +431,7 @@ void ctrl_mostrar_finalistas(
         int v_puntuaciones_entrante[], int v_puntuaciones_primero[], int v_puntuaciones_postre[], int &num_concursantes){
         
 }
-
+/*
 // ============================================================
 int main() {
     char v_nombre_concursante1[MAX_NOMBRE] = "Ana Garcia";
@@ -526,4 +518,14 @@ int main() {
         }
     } while (opcion != 7);
     return 0;
+}
+*/
+
+int main(){
+	char cadena[MAX_NOMBRE] = "diego";
+	int longitud = 0;
+	
+	longitud = longitud_cadena(cadena,MAX_NOMBRE);
+	cout << "longitud mide: " << longitud << endl;
+
 }
