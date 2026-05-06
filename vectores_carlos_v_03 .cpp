@@ -18,6 +18,7 @@ const int MAX_PUN          = 10;
 // ============================================================
 
 // ---- Gestión de cadenas de caracteres ----
+//nuevo comentario
 
 /** ------------------------------------------------------------
  * @brief Módulo que calcula la longitud de una cadena de caracteres
